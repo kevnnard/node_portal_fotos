@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+   
+    <%- include("../partials/head") -%>
+    <title>Images</title>
+</head>
+
+<body>
+
+    <%- include("../partials/navigation") %>
+<div class="row">
+  <div class="col-md-4 mx-auto">
+    <div class="card mt-4 text-center">
+      <div class="card-header">
+        <h1 class="h4">
+          Iniciar Sesion en cuenta
+        </h1>
+      </div>
+      <div class="">
+        <img class="small--hide" src="//cdn.shopify.com/s/files/1/0264/9161/7361/files/FOXHEADHORIZONTAL_a40c7e94-357d-4a49-87ae-73dc32ddfd6c_140x.png?v=1628572613" srcset="//cdn.shopify.com/s/files/1/0264/9161/7361/files/FOXHEADHORIZONTAL_a40c7e94-357d-4a49-87ae-73dc32ddfd6c_140x.png?v=1628572613 1x, //cdn.shopify.com/s/files/1/0264/9161/7361/files/FOXHEADHORIZONTAL_a40c7e94-357d-4a49-87ae-73dc32ddfd6c_140x@2x.png?v=1628572613 2x" alt="FOX RACING COLOMBIA TIENDA OFICIAL FOX CONCEPT STORE FOX COLOMBIA " itemprop="logo">
+      </div>
+      <div class="card-body">
+        <form action="/users/signin" method="POST">
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Email" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Contraseña">
+          </div>
+          <button class="btn btn-primary btn-block">
+            Iniciar Sesión
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

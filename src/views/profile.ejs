@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("partials/head") -%>
+    <title>Image Profle</title>
+   
+</head>
+
+<body>
+
+    <%- include("partials/navigation") %>
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+
+                <div class="card animated fadeInDown">
+                    <img src="<%= image.path %>" class="card-img-top" alt="<%= image.filename %>">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= image.title %>
+                        </h5>
+                        <p class="card-text">
+                            <%= image.description %>
+                        </p>
+                        <p class="card-text">
+                            Sku : <b><%= image.sku %></b>
+                            
+                        </p>
+                        <p>
+                            <%= format(image.created_at) %>
+                        </p>
+                        <% if (user.email === process.env.EMAIL_ADMIN) { %>
+                        <a href="/image/<%= image._id%>/delete" class="btn btn-danger btn-block">
+                            Borrar imagen
+                        </a>
+                        <% } %>
+                        <a  href="<%=  image.imageUrl%>" class="btn btn-danger btn-block">
+                            Descargar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

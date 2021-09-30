@@ -1,0 +1,46 @@
+body {
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}   
+* {
+    font-family: 'rift';
+  }
+/* Custom CSS */
+.logo {
+    width: 30%;
+  }
+  .logo-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar  {
+    background-color: #000 !important;
+  }
+  .navbar-nav > li > .nav-link {
+    color: #fff !important;
+  }
+  .nav-item {
+    padding: 5px 1.2rem !important;
+  }
+  .form-control::placeholder{
+    color: #fff !important;
+  }
+  textarea.form-control::placeholder,
+  .form-group > input.form-control::placeholder {
+    color: #444 !important;
+  }
+  .btn-outline-success { 
+    background-color: #fff !important;
+    color: #000 !important;
+    transition: all .5s ease;
+  }
+  .btn-outline-success:hover {
+    background-color: #4caf50!important;
+    color: #fff !important;
+  }
+
+div.row > div.card-columns {
+  column-count: 4 !important;
+}
