@@ -1,2 +1,4 @@
-# node_portal_fotos
-Portal de fotos para Grupo R
+# Finterest
+a simple example nodejs and mongodb app based on Pinterest.
+
+![](docs/screenshot.png)

@@ -21,9 +21,10 @@
                     <% images.forEach(function (image) { %>
     
                     <div class="card animated fadeInDown">
-                        <div class="img-body">
-                            <img src="<%= image.path %>" class="card-img-top" alt="<%= image.filename %>">
-                        </div>
+                        <% if (image.cat == 'FOX') { %>
+                            <div class="img-body">
+                                <img src="<%= image.path %>" class="card-img-top" alt="<%= image.filename %>">
+                            </div>
                         <div class="card-body">
                             <h5 class="card-title"><%= image.title %></h5>
                             <!-- <p class="card-text"><%= image.description %></p> -->
@@ -34,6 +35,11 @@
                                Ver imagen 
                             </a>
                         </div>
+                            <% } else if (!image.cat == 'FOX') {%>
+                          <style> div.animated{
+                              display: none !important;
+                          }</style>
+                          <% } %>
                     </div>
                     <% }) %>
                 </div>

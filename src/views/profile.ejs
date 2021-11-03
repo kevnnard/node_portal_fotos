@@ -12,7 +12,7 @@
     <%- include("partials/navigation") %>
 
     <div class="container p-4">
-        <div class="row">
+        <div class="row ">
             <div class="col-md-4 offset-md-4">
 
                 <div class="card animated fadeInDown">
@@ -28,6 +28,10 @@
                             Sku : <b><%= image.sku %></b>
                             
                         </p>
+                        <p class="card-text">
+                            Proveedor : <b><%= image.cat %></b>
+                            
+                        </p>
                         <p>
                             <%= format(image.created_at) %>
                         </p>
@@ -36,8 +40,11 @@
                             Borrar imagen
                         </a>
                         <% } %>
-                        <a  href="<%=  image.imageUrl%>" class="btn btn-danger btn-block">
+                        <a href="<%= image.path%>" class="btn btn-danger btn-block" download target="_blanck">
                             Descargar
+                        </a>
+                        <a  href="/" class="btn btn-primary btn-block">
+                            Volver
                         </a>
                     </div>
                 </div>
@@ -46,6 +53,7 @@
         </div>
     </div>
 
+    <%- include("partials/footer") %>
 </body>
 
 </html>

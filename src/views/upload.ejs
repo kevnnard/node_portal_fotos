@@ -23,17 +23,25 @@
                             <div class="input-group mb-3">
                                 <div class="custom-file">
                                     <input type="file" name="image" class="custom-file-input" id="inputGroupFile02">
-                                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Cargar  archivo</label>
+                                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02" required>Cargar  archivo</label>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="title" placeholder="Title" class="form-control">
+                                <input type="text" name="title" placeholder="Title" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="sku" placeholder="sku" class="form-control">
+                                <input type="text" name="sku" placeholder="sku" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <textarea name="description" placeholder="Description" class="form-control"></textarea>
+                                <select type="text" name="cat" placeholder="Proveedor" class="form-control" required>
+                                    <option value="value0" selected disabled>**SELECCIONAR</option>
+                                    <option value="FOX">Fox</option>
+                                    <option value="REPLAYS">Replays</option>
+                                    <!-- <option value="value3">Value 3</option> -->
+                                  </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="description" placeholder="Description" class="form-control" required></textarea>
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-success btn-block">
@@ -50,6 +58,8 @@
     <% } else { %>
         <%- include("../404") %>
     <% } %>
+
+    <%- include("partials/footer") %>
 </body>
 
 </html>

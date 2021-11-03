@@ -9,7 +9,8 @@
     <%- include("../partials/navigation") %>
 
 <% if (user.email === process.env.EMAIL_ADMIN) { %>
-<div class="row">
+  <div class="container">
+<div class="row m-5">
   <div class="col-md-4 mx-auto">
     <div class="card">
       <div class="card-header">
@@ -37,8 +38,11 @@
     </div>
   </div>
 </div>
+</div>
 <% } else { %>
   <%- include("../404") %>
 <% } %>
+
+<%- include("../partials/footer") %>
 </body>
 </html>

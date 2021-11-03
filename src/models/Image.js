@@ -2,6 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const imageSchema = new Schema({
     sku: {type: String},
+    cat: {type: String},
     title: {type: String},
     description: {type: String},
     filename: {type: String},

@@ -4,13 +4,15 @@ const { unlink } = require('fs-extra');
 const fs = require('fs-extra');
 const router = Router();
 const { isAuthenticated } = require("../helpers/auth");
-const  download  =  require ('node-image-downloader');
+
+
 
 // Models
 const Image = require('../models/Image');
 const { link } = require('fs');
 const { url } = require('inspector');
 const cloudinary = require('cloudinary');
+
 cloudinary.config({ 
     cloud_name: process.env.CLOUD_NAME, 
     api_key: process.env.API_KEY, 
@@ -20,7 +22,19 @@ cloudinary.config({
 router.get('/', isAuthenticated, async (req, res) => {
     const images = await Image.find();
     res.render('index', { images });
-    
+});
+
+router.get('/fox', isAuthenticated, async (req, res) => {
+    const images = await Image.find();
+    const image = new Image();
+    image.cat = req.body.cat;
+    res.render('index-fox', { images });
+});
+router.get('/replays', isAuthenticated, async (req, res) => {
+    const images = await Image.find();
+    const image = new Image();
+    image.cat = req.body.cat;
+    res.render('replays', { images });
 });
 
 router.get('/upload', isAuthenticated, (req, res) => {
@@ -34,6 +48,7 @@ router.post('/upload', isAuthenticated , async (req, res) => {
     const image = new Image();
     const result = await cloudinary.v2.uploader.upload(req.file.path);
     image.sku = req.body.sku;
+    image.cat = req.body.cat;
     image.title = req.body.title;
     image.description = req.body.description;
     image.filename = req.file.filename;
@@ -60,16 +75,16 @@ router.get('/image/:id/delete',isAuthenticated,  async (req, res) => {
     res.redirect('/');
 });
 
-router.get('/download/<%= imageUrl %>', isAuthenticated, (req, res) => {
-    res.download('../public/img/uploads' + result.url.imageUrl);
-    result.url.imageUrl, function (err) {
-        if(err) {
-            console.log(err)
-        } else {
-            console.log('listo')
+router.get('/buscar', isAuthenticated, async (req, res) => {
+        if(req.query.search) {
+            const images = await Image.find({
+                sku: req.query.search,
+            });
+            console.log('el sku es :', {images})
+            res.render('buscar', { images })
         }
-    }
-    res.redirect('/');
+
+    
 });
 
 module.exports = router;

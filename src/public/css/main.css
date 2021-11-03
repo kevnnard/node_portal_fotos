@@ -2,6 +2,7 @@ body {
     background: #ECE9E6;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
 }   
 * {
     font-family: 'rift';
@@ -17,6 +18,9 @@ body {
   }
   .navbar  {
     background-color: #000 !important;
+  }
+  .navbar-toggler {
+    background-color: #fff !important;
   }
   .navbar-nav > li > .nav-link {
     color: #fff !important;
@@ -43,4 +47,38 @@ body {
 
 div.row > div.card-columns {
   column-count: 4 !important;
+}
+.img-body {
+  height: 300px;
+}
+.img-body > img {
+  height: 100%;
+  background-size: contain;
+}
+
+/* ARREGLOS BOOTSTRAP */ 
+.col-sm-3 {
+  display: flex;
+  justify-content: center;
+  max-width: none !important;
+  padding: 15px;
+}
+.col-sm-9 {
+  max-width: none !important;
+}
+@media (max-width: 900px) {
+  .grid-mobile {
+    display: inline;
+  }
+}
+.container, .container-sm, .container-md, .container-lg, .container-xl {
+  max-width: 100%;
+}
+@media (min-width: 900px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 95%;
+}
+}
+aside {
+  width: 70%;
 }
