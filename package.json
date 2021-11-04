@@ -1,7 +1,7 @@
 {
-  "name": "nodejs-finterest",
+  "name": "portal-fox",
   "version": "1.0.0",
-  "description": "a simple example nodejs and mongodb app based on Pinterest.",
+  "description": "Portal para empresa Grupo R SAS , portal de fotos y videos y archivos, para dicha empresa",
   "main": "index.js",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -17,6 +17,7 @@
     "fs-extra": "^10.0.0",
     "image-downloader": "^4.0.3",
     "method-override": "^3.0.0",
+    "mongodb": "^4.1.4",
     "mongoose": "^5.4.3",
     "morgan": "^1.10.0",
     "multer": "^1.4.3",
@@ -35,13 +36,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FaztTech/nodejs-finterest.git"
+    "url": "https://github.com/kevnnard"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["kevnnard", "portal", "portal de fotos"],
+  "author": "Kevnnard",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/FaztTech/nodejs-finterest/issues"
-  },
-  "homepage": "https://github.com/FaztTech/nodejs-finterest#readme"
+  "homepage": "https://kevnnard.com"
 }

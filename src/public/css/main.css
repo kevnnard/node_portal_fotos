@@ -45,15 +45,14 @@ body {
     color: #fff !important;
   }
 
-div.row > div.card-columns {
+div.card-columns {
   column-count: 4 !important;
 }
 .img-body {
   height: 300px;
 }
 .img-body > img {
-  height: 100%;
-  background-size: contain;
+  height: inherit;
 }
 
 /* ARREGLOS BOOTSTRAP */ 

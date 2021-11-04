@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Images</title>
+    <%- include("partials/head") -%>
+</head>
+
+<body>
+
+    <%- include("partials/navigation") %>
+
+    <div class="container m-0 p-3">     
+        <div class="row grid-mobile">
+            <div class="col-sm-3">
+                <%- include("partials/aside") %>
+            </div>
+            <div class="col-sm-9">
+                <div class="card-columns">
+
+                    <% images.forEach(function (image) { %>
+
+                    <div class="card animated fadeInDown">
+                        <% if (image.cat == 'SOUTH') { %>
+                            <div class="img-body">
+                                <img src="<%= image.path %>" class="card-img-top" alt="<%= image.filename %>">
+                            </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><%= image.title %></h5>
+                            <!-- <p class="card-text"><%= image.description %></p> -->
+                            <p class="card-text">Sku: <b><%= image.sku %></b></p>
+                            <p class="card-text">Proveedor: <b><%= image.cat %></b></p>
+                            <!-- <p><%= format(image.created_at) %></p> -->
+                            <a href="/image/<%= image._id %>" class="btn btn-primary">
+                               Ver imagen 
+                            </a>
+                        </div>
+                        <% } else if (!image.cat == 'REPLAYS') {%>
+                            <style> div.animated {
+                                display: none !important;
+                            }</style>
+                            <% } %>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <%- include("partials/footer") %>
+
+</body>
+
+</html>

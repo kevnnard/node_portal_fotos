@@ -36,7 +36,12 @@ router.get('/replays', isAuthenticated, async (req, res) => {
     image.cat = req.body.cat;
     res.render('replays', { images });
 });
-
+router.get('/south', isAuthenticated, async (req, res) => {
+    const images = await Image.find();
+    const image = new Image();
+    image.cat = req.body.cat;
+    res.render('south', { images });
+});
 router.get('/upload', isAuthenticated, (req, res) => {
     res.render('upload');
 });

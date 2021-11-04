@@ -1,0 +1,9 @@
+## modulos
+# node_modules
+#------------
+## enviroments 
+# .env
+##--------- 
+# images uploads 
+# /public/img/uploads
+#---------------
