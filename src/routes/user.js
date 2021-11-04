@@ -3,7 +3,7 @@ const router = express.Router();
 const path = require('path');
 const User = require("../models/User");
 const passport = require ("passport");
-
+const { model } = require("mongoose");
 const flash = require("connect-flash");
 const { truncate } = require("fs/promises");
 

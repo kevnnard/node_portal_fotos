@@ -6,7 +6,7 @@ const uuid = require('uuid/v4');
 const { format } = require('timeago.js');
 const session = require("express-session");
 const methodOverride = require( "method-override");
-const { createAdminUser } = require("./libs/createUser");
+const userC = require("./libs/createUser");
 const path = require('path');
 const config = require( "./config");
 require("./config/passport");
@@ -17,7 +17,7 @@ const flash = require("connect-flash");
 // intializations
 
 const app = express();
-createAdminUser();
+userC;
 
 
 // settings

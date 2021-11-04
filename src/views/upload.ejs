@@ -3,13 +3,10 @@
 
 <head>
     <%- include("partials/head") -%>
-    <title>Upload an Image</title>
-    
+    <title>Upload an Image</title>  
 </head>
-
+<%- include("partials/navigation") %>
 <body>
-
-    <%- include("partials/navigation") %>
     <% if (user.email === process.env.EMAIL_ADMIN) { %>
     <div class="container p-4">
         <div class="row">
