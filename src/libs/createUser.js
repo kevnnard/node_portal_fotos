@@ -18,4 +18,4 @@ const createAdminUser = async () => {
   console.log("Usuario de Admin creado...", admin);
 };
 
-module.exports = createAdminUser();
+module.exports = createAdminUser;
