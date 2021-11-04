@@ -17,7 +17,7 @@ const flash = require("connect-flash");
 // intializations
 
 const app = express();
-createAdminUser;
+createAdminUser();
 
 
 // settings
