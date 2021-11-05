@@ -64,6 +64,7 @@ router.post('/upload', isAuthenticated , async (req, res) => {
     image.imageUrl = result.url;
     image.public_id = result.public_id;
     await image.save();
+    req.flash('success_msg', 'Imagen registrada con exito');
     res.redirect('/');
 });
 
@@ -76,7 +77,8 @@ router.get('/image/:id', isAuthenticated, async (req, res) => {
 router.get('/image/:id/delete',isAuthenticated,  async (req, res) => {
     const { id } = req.params;
     const imageDeleted = await Image.findByIdAndDelete(id);
-    await unlink(path.resolve('./src/public' + imageDeleted.path));
+    // await unlink(path.resolve('/uploads' + imageDeleted.path));
+    req.flash('error_msg', `Imagen borrada`);
     res.redirect('/');
 });
 
@@ -85,7 +87,6 @@ router.get('/buscar', isAuthenticated, async (req, res) => {
             const images = await Image.find({
                 sku: req.query.search,
             });
-            console.log('el sku es :', {images})
             res.render('buscar', { images })
         }
 

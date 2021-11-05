@@ -8,7 +8,9 @@
 <%- include("../partials/navigation") %>
 <body>
 <% if (user.email === process.env.EMAIL_ADMIN) { %>
-  <div class="container">
+<div class="container">
+<%- include("../partials/messages") %>
+<%- include("../partials/errors") %>
 <div class="row m-5">
   <div class="col-md-4 mx-auto">
     <div class="card">
