@@ -6,7 +6,7 @@ const configurations = {
   PORT: process.env.PORT || 4000,
   MONGODB_HOST: process.env.MONGODB_HOST || "localhost",
   MONGODB_DATABASE: process.env.MONGODB_DB || "portalFoxReplays",
-  MONGODB_URI: "mongodb+srv://kevnnard:Kevnnard2021@cluster0.gavvh.mongodb.net/fox-portal?retryWrites=true&w=majority",
+  MONGODB_URI: "mongodb+srv://kevnnard:Kevinleo982413@cluster0.gavvh.mongodb.net/fox-portal?retryWrites=true&w=majority",
 };
 
 module.exports = configurations;
