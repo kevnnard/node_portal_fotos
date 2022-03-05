@@ -1,5 +1,5 @@
 ## modulos
-#node_modules
+node_modules
 #------------
 ## enviroments 
 #.env
